@@ -28,7 +28,7 @@ talha@dev:~$ cat /etc/profile
 portfolio:   https://behance.net/talhagleryz
 role:        UI/UX & Frontend Developer / Full-Stack Developer
 expertise:   [ Next.js, React Native, UI/UX Architecture, AI Integration ]
-education:   Istanbul Kultur University (Computer Programming)
+education:   Istanbul Kultur University
 location:    Istanbul, TR 🇹🇷
 ```
 
