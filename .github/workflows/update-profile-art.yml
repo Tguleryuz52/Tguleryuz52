@@ -1,0 +1,43 @@
+name: Update Profile README Art
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # Runs daily at 06:00 UTC
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-art:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Dependencies
+        run: |
+          pip install requests==2.32.3 beautifulsoup4==4.12.3
+
+      - name: Fetch Contributions & Render Heatmap
+        env:
+          GH_PROFILE_USER: ${{ github.repository_owner }}
+        run: |
+          python scripts/fetch_contributions.py
+          python scripts/render_heatmap_svg.py
+          python scripts/make_info_card.py
+
+      - name: Commit & Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh contribution graph [skip ci]"
+          file_pattern: "data/contributions.json contrib-heatmap.svg info-card.svg"
