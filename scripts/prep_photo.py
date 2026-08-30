@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-High-quality portrait background removal using u2net session and contrast enhancement for ASCII art.
+Tight crop and high-contrast portrait optimization for ultra-detailed ASCII face.
 """
 import os
 import sys
@@ -13,47 +13,48 @@ OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "..", "source-pre
 
 def main():
     if not os.path.exists(INP):
-        print(f"Input file {INP} not found.", file=sys.stderr)
+        print(f"Error: {INP} not found", file=sys.stderr)
         sys.exit(1)
 
-    print(f"Loading {INP}...")
     orig = Image.open(INP).convert("RGB")
+    W, H = orig.size
+
+    # Focus crop tightly on head, glasses, face, coffee cup (head & shoulders)
+    # Coordinates tailored for his portrait:
+    crop_box = (
+        int(W * 0.15),  # left
+        int(H * 0.08),  # top
+        int(W * 0.88),  # right
+        int(H * 0.78),  # bottom (chest level)
+    )
+    cropped = orig.crop(crop_box)
 
     try:
         from rembg import remove, new_session
-        print("Removing background with u2net session...")
         session = new_session("u2net")
-        cutout = remove(orig, session=session)
+        cutout = remove(cropped, session=session)
     except Exception as e:
-        print(f"Rembg u2net session failed: {e}. Falling back to default.")
-        from rembg import remove
-        cutout = remove(orig)
+        print(f"rembg error: {e}")
+        cutout = cropped.convert("RGBA")
 
     # Composite onto pure white background
     white_bg = Image.new("RGBA", cutout.size, (255, 255, 255, 255))
     comp = Image.alpha_composite(white_bg, cutout)
-    
-    # Auto-crop based on non-white content
-    bbox = cutout.getbbox()
-    if bbox:
-        comp = comp.crop(bbox)
 
     # Convert to grayscale
     gray = comp.convert("L")
 
-    # Autocontrast
-    gray = ImageOps.autocontrast(gray, cutoff=1)
+    # Enhance local contrast for facial features (eyes, glasses, jawline, hair)
+    gray = ImageOps.autocontrast(gray, cutoff=2)
+    gray = gray.filter(ImageFilter.UnsharpMask(radius=2.5, percent=220, threshold=1))
 
-    # Sharpen features
-    gray = gray.filter(ImageFilter.UnsharpMask(radius=2, percent=150, threshold=2))
-
-    # Increase contrast
-    enh_c = ImageEnhance.Contrast(gray).enhance(1.4)
-    enh_b = ImageEnhance.Brightness(enh_c).enhance(1.02)
+    # Boost contrast & brightness balance
+    enh_c = ImageEnhance.Contrast(gray).enhance(1.6)
+    enh_b = ImageEnhance.Brightness(enh_c).enhance(1.08)
 
     os.makedirs(os.path.dirname(os.path.abspath(OUT)), exist_ok=True)
     enh_b.save(OUT)
-    print(f"Saved prepped image to: {OUT}")
+    print(f"Saved optimized face-focused prepped image to {OUT}")
 
 if __name__ == "__main__":
     main()

@@ -21,6 +21,50 @@
 
 <br><br>
 
+<h3><code>talha@github ~ $ cat tech_stack.json</code></h3>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
+  <img src="https://img.shields.io/badge/Gemini_AI-8E75C2?style=for-the-badge&logo=google&logoColor=white" alt="Gemini AI" />
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
+  <img src="https://img.shields.io/badge/Unreal_Engine_5-0E1128?style=for-the-badge&logo=unrealengine&logoColor=white" alt="UE5" />
+</p>
+
+<br>
+
+<h3><code>talha@github ~ $ ./featured_projects.sh</code></h3>
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <h4 align="center">🩺 Bioos</h4>
+      <p align="center"><sub><b>Full-Stack Medical AI Analysis</b></sub></p>
+      <p>7-stage verifiable clinical reasoning pipeline with FHIR/LOINC &amp; multi-agent consensus.</p>
+      <p align="center"><code>Next.js</code> · <code>Gemini 2.5</code> · <code>Vectordb</code></p>
+    </td>
+    <td width="33%" valign="top">
+      <h4 align="center">👗 Feron</h4>
+      <p align="center"><sub><b>AI Digital Wardrobe &amp; Stylist</b></sub></p>
+      <p>Smart outfit generation with automated background matting and WASM resilience.</p>
+      <p align="center"><code>Next.js</code> · <code>Python</code> · <code>WASM</code></p>
+    </td>
+    <td width="33%" valign="top">
+      <h4 align="center">🤖 Robotoy</h4>
+      <p align="center"><sub><b>Interactive AI Family Assistant</b></sub></p>
+      <p>End-to-end hardware &amp; mobile robotic assistant. ANTSPARK 3rd · TÜBİTAK approved.</p>
+      <p align="center"><code>Fusion 360</code> · <code>RPi 5</code> · <code>Flutter</code></p>
+    </td>
+  </tr>
+</table>
+
+<br>
+
 <h3><code>talha@github ~ $ ./links.sh</code></h3>
 
 <p align="center">
