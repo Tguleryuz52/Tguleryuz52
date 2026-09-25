@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Bioos",
+    "repo": null,
+    "slug": "bioos",
+    "logo": "bioos.png",
+    "description": "Full-stack medical AI: 7-stage verifiable clinical reasoning with FHIR/LOINC and multi-agent consensus",
+    "tags": [
+      "Next.js",
+      "Gemini",
+      "VectorDB"
+    ]
+  },
+  {
+    "name": "Feron",
+    "repo": "Tguleryuz52/Feron-E-Ticaret-FeronLabs-Web-",
+    "logo": "feron.png",
+    "description": "AI digital wardrobe & stylist: outfit generation with automated background matting and WASM resilience",
+    "tags": [
+      "Next.js",
+      "Python",
+      "WASM"
+    ]
+  },
+  {
+    "name": "Robotoy",
+    "repo": null,
+    "slug": "robotoy",
+    "logo": "robotoy.png",
+    "description": "Interactive AI family robot, hardware to mobile app. ANTSPARK 3rd place, TÜBİTAK supported",
+    "tags": [
+      "RPi 5",
+      "Flutter",
+      "Fusion 360"
+    ]
+  },
+  {
+    "name": "UE5 AI Systems",
+    "repo": "Tguleryuz52/Unreal-Engine-AI-Systems",
+    "logo": "ue5.png",
+    "description": "Gameplay AI systems for Unreal Engine 5, built on the Gameplay Ability System",
+    "tags": [
+      "UE5",
+      "C++",
+      "GAS"
+    ]
+  },
+  {
+    "name": "Chloe ST200",
+    "repo": "Tguleryuz52/Chloe-ST200-Project",
+    "logo": "chloe.png",
+    "description": "Detroit: Become Human inspired CyberLife ST200 android project",
+    "tags": [
+      "Python",
+      "C++",
+      "AI"
+    ]
+  },
+  {
+    "name": "FIFA Planning",
+    "repo": "Tguleryuz52/FIFA-Planing",
+    "logo": "fifa.png",
+    "description": "Gamified self-improvement: level up your real-life stats like a FIFA player card",
+    "tags": [
+      "TypeScript",
+      "React",
+      "Mobile"
+    ]
+  }
+]

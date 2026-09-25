@@ -1,0 +1,7 @@
+# local previews / generated in CI
+dist/
+data/profile.json
+_preview*
+_harness.html
+_readme-preview.html
+__pycache__/
