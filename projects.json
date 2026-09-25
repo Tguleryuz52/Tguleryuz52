@@ -1,24 +1,21 @@
 [
   {
-    "name": "Özdemir Makine",
-    "repo": null,
-    "slug": "ozdemir-makine",
-    "icon": "gear",
-    "description": "CRM-driven B2B platform for industrial machinery: every web lead lands in Zoho CRM automatically",
-    "tags": ["Next.js 16", "Sanity", "Zoho CRM"],
-    "badge": "CRM",
-    "highlights": ["Zoho CRM sync", "5 languages", "Arabic RTL"],
-    "footer": "private · in production"
-  },
-  {
     "name": "Bioos",
     "repo": null,
     "slug": "bioos",
     "icon": "pulse",
     "description": "Medical AI that shows its work: 7-stage verifiable clinical reasoning with multi-agent consensus",
-    "tags": ["Next.js", "Gemini", "VectorDB"],
+    "tags": [
+      "Next.js",
+      "Gemini",
+      "VectorDB"
+    ],
     "badge": "AI",
-    "highlights": ["7-stage chain", "FHIR · LOINC", "Multi-agent"],
+    "highlights": [
+      "7-stage chain",
+      "FHIR · LOINC",
+      "Multi-agent"
+    ],
     "footer": "private repo"
   },
   {
@@ -26,7 +23,11 @@
     "repo": "Tguleryuz52/Feron-E-Ticaret-FeronLabs-Web-",
     "icon": "hanger",
     "description": "AI digital wardrobe & stylist: outfit generation with automated background matting and WASM resilience",
-    "tags": ["Next.js", "Python", "WASM"]
+    "tags": [
+      "Next.js",
+      "Python",
+      "WASM"
+    ]
   },
   {
     "name": "Robotoy",
@@ -34,9 +35,17 @@
     "slug": "robotoy",
     "icon": "robot",
     "description": "End-to-end AI family robot: Fusion 360 body, Raspberry Pi 5 brain and a Flutter companion app",
-    "tags": ["RPi 5", "Flutter", "Fusion 360"],
+    "tags": [
+      "RPi 5",
+      "Flutter",
+      "Fusion 360"
+    ],
     "badge": "3rd",
-    "highlights": ["ANTSPARK 3rd", "TÜBİTAK backed", "HW + mobile"],
+    "highlights": [
+      "ANTSPARK 3rd",
+      "TÜBİTAK backed",
+      "HW + mobile"
+    ],
     "footer": "private · award winner"
   },
   {
@@ -44,13 +53,40 @@
     "repo": "Tguleryuz52/Chloe-ST200-Project",
     "icon": "android",
     "description": "Detroit: Become Human inspired CyberLife ST200 android project",
-    "tags": ["Python", "C++", "AI"]
+    "tags": [
+      "Python",
+      "C++",
+      "AI"
+    ]
   },
   {
     "name": "FIFA Planning",
     "repo": "Tguleryuz52/FIFA-Planing",
     "icon": "card",
     "description": "Gamified self-improvement: level up your real-life stats like a FIFA player card",
-    "tags": ["TypeScript", "React", "Mobile"]
+    "tags": [
+      "TypeScript",
+      "React",
+      "Mobile"
+    ]
+  },
+  {
+    "name": "Özdemir Makine",
+    "repo": null,
+    "slug": "ozdemir-makine",
+    "icon": "gear",
+    "description": "CRM-driven B2B platform for industrial machinery: every web lead lands in Zoho CRM automatically",
+    "tags": [
+      "Next.js 16",
+      "Sanity",
+      "Zoho CRM"
+    ],
+    "badge": "CRM",
+    "highlights": [
+      "Zoho CRM sync",
+      "5 languages",
+      "Arabic RTL"
+    ],
+    "footer": "private · in production"
   }
 ]
