@@ -48,6 +48,10 @@
 </picture>
 </div>
 
+<div align="center">
+<a href="https://feron-e-ticaret-feron-labs-web.vercel.app"><img src="https://img.shields.io/badge/Feron_%C2%B7_Live_Demo-0A101F?style=for-the-badge&logo=vercel&logoColor=10B981&labelColor=0A101F" alt="Feron live demo" /></a>
+</div>
+
 <!-- ===== SOCIAL BADGES ===== -->
 <br/>
 <div align="center">

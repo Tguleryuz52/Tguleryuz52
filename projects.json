@@ -22,11 +22,11 @@
     "name": "Feron",
     "repo": "Tguleryuz52/Feron-E-Ticaret-FeronLabs-Web-",
     "icon": "hanger",
-    "description": "AI digital wardrobe & stylist: outfit generation with automated background matting and WASM resilience",
+    "description": "Fashion storefront, live on Vercel: Sanity catalog, Supabase backend and an animated cart",
     "tags": [
-      "Next.js",
-      "Python",
-      "WASM"
+      "Next.js 16",
+      "Sanity",
+      "Supabase"
     ]
   },
   {
@@ -52,22 +52,22 @@
     "name": "Chloe ST200",
     "repo": "Tguleryuz52/Chloe-ST200-Project",
     "icon": "android",
-    "description": "Detroit: Become Human inspired CyberLife ST200 android project",
+    "description": "Voice AI android: Whisper hears, Claude thinks, ElevenLabs speaks, UE5 lip-syncs",
     "tags": [
-      "Python",
-      "C++",
-      "AI"
+      "Claude API",
+      "Whisper",
+      "UE5"
     ]
   },
   {
     "name": "FIFA Planning",
-    "repo": "Tguleryuz52/FIFA-Planing",
+    "repo": "Tguleryuz52/FIFA-Planning",
     "icon": "card",
-    "description": "Gamified self-improvement: level up your real-life stats like a FIFA player card",
+    "description": "Gamified self-improvement app: FIFA-style player card, skill stats and swipeable quests",
     "tags": [
-      "TypeScript",
-      "React",
-      "Mobile"
+      "React Native",
+      "Expo",
+      "Firebase"
     ]
   },
   {
@@ -83,9 +83,9 @@
     ],
     "badge": "CRM",
     "highlights": [
-      "Zoho CRM sync",
-      "5 languages",
-      "Arabic RTL"
+      "Lighthouse 97",
+      "SEO 100",
+      "5 langs + RTL"
     ],
     "footer": "private · in production"
   }

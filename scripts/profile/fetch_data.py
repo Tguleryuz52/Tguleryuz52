@@ -125,6 +125,9 @@ def main():
         "prs": search_count(f"author:{USER} type:pr"),
         "issues": search_count(f"author:{USER} type:issue"),
         "contributed_to": len(contributed),
+        "public_repos": len(own),
+        "languages_used": len(langs),
+        "top_language": max(langs, key=langs.get) if langs else "n/a",
     }
 
     with open(os.path.join(ROOT, "projects.json"), encoding="utf-8") as fh:
