@@ -95,6 +95,28 @@ def streaks(days, created):
     }
 
 
+# ---------------------------------------------------------------- achievements
+ACH_RE = re.compile(r'achievement=([a-z0-9-]+)&amp;tab=achievements" class="position-relative">'
+                    r'<img src="([^"]+)"[^>]*alt="Achievement: ([^"]+)"[^>]*/>(.*?)</a>', re.S)
+
+
+def achievements():
+    """Earned GitHub achievements, as shown in the profile sidebar (name, tier, badge image)."""
+    try:
+        html = get(f"https://github.com/{USER}?tab=achievements", raw=True)
+    except Exception as e:  # noqa: BLE001 - panel falls back to awards only
+        print(f"warn: achievements: {e}", file=sys.stderr)
+        return []
+    out, seen = [], set()
+    for slug, img, name, inner in ACH_RE.findall(html):
+        if slug in seen:
+            continue
+        seen.add(slug)
+        tier = re.search(r">\s*(x\d+)\s*<", inner)
+        out.append({"slug": slug, "name": name, "img": img, "tier": tier.group(1) if tier else None})
+    return out
+
+
 # ---------------------------------------------------------------- main
 def main():
     user = get(f"https://api.github.com/users/{USER}")
@@ -153,6 +175,7 @@ def main():
         "stats": stats,
         "languages": langs,
         "projects": projects,
+        "achievements": achievements(),
         "days": [{"date": d, "count": days[d]} for d in sorted(days) if d <= dt.date.today().isoformat()],
     }
     os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)

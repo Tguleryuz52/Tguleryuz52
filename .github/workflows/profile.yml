@@ -38,6 +38,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install Pillow (badge thumbnails)
+        run: pip install pillow
+
       - name: Fetch live data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -48,6 +51,7 @@ jobs:
         run: |
           python scripts/profile/cards.py dist
           python scripts/profile/projects.py dist
+          python scripts/profile/achievements.py dist
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0

@@ -52,6 +52,15 @@
 <a href="https://feron-e-ticaret-feron-labs-web.vercel.app"><img src="https://img.shields.io/badge/Feron_%C2%B7_Live_Demo-0A101F?style=for-the-badge&logo=vercel&logoColor=10B981&labelColor=0A101F" alt="Feron live demo" /></a>
 </div>
 
+<!-- ===== ACHIEVEMENTS · GitHub badges (auto) + awards ===== -->
+<br/>
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Tguleryuz52/Tguleryuz52/output/achievements-dark.svg" />
+  <img width="100%" src="https://raw.githubusercontent.com/Tguleryuz52/Tguleryuz52/output/achievements-light.svg" alt="Achievements and awards" />
+</picture>
+</div>
+
 <!-- ===== SOCIAL BADGES ===== -->
 <br/>
 <div align="center">
