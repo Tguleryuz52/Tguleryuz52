@@ -34,17 +34,17 @@ ROOT = os.path.normpath(os.path.join(HERE, "..", ".."))
 HANDLE_MAIL = "guleryuztalha52@gmail.com"
 ROWS = [
     ("Subject", "Talha Güleryüz"),
-    ("Role", "Software Developer & Product Builder"),
-    ("Origin", "Türkiye"),
-    ("Education", "IKU, Visual Comm. & Comp. Programming"),
-    ("Status", "Building + Learning + Shipping"),
-    ("ToolChain", "VS Code, Claude Code, Figma, UE5"),
+    ("Role", "Software Developer"),
+    ("Education", "Software Engineering, IKU"),
+    ("Focus", "AI Agents · Full-Stack · CRM Automation"),
+    ("Awards", "TEKNOFEST Top 14 · ANTSPARK 3rd · TÜBİTAK"),
     None,
     ("Core.Lang", "TypeScript, Python, C++"),
-    ("Core.Frontend", "Next.js, React, Tailwind"),
-    ("Core.Backend", "Node.js, FastAPI"),
-    ("Core.Database", "Supabase, Sanity, SQL"),
-    ("Core.Infra", "Vercel, GitHub Actions"),
+    ("Core.Frontend", "Next.js 16, React 19, Tailwind v4"),
+    ("Core.Backend", "Node.js, FastAPI, Supabase"),
+    ("Core.AI", "Claude API, Gemini, Multi-Agent, RAG"),
+    ("Core.Data", "Zoho CRM, Sanity CMS, PostgreSQL"),
+    ("Core.Infra", "Vercel, GitHub Actions, CI/CD"),
     "Contact",
     ("Grid.Mail", HANDLE_MAIL),
     ("Grid.Portfolio", "talhaguleryuz.framer.website"),
@@ -52,7 +52,7 @@ ROWS = [
     ("Grid.GitHub", "@Tguleryuz52"),
     ("Grid.Behance", "talhagleryz"),
 ]
-LOGOS = ["nextdotjs", "react", "python", "cplusplus", "nodedotjs", "vercel"]
+LOGOS = ["nextdotjs", "react", "python", "claude", "cplusplus", "nodedotjs", "vercel"]
 INVERT = {"nextdotjs", "cplusplus"}   # badge logos: draw rim + letters instead of the solid badge
 
 # ---------------------------------------------------------------- photo
