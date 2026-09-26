@@ -145,6 +145,7 @@ def main():
         "stars": sum(r["stargazers_count"] for r in own),
         "commits": commits,
         "prs": search_count(f"author:{USER} type:pr"),
+        "merged_prs": search_count(f"author:{USER} type:pr is:merged"),
         "issues": search_count(f"author:{USER} type:issue"),
         "contributed_to": len(contributed),
         "public_repos": len(own),
