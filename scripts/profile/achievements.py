@@ -30,9 +30,8 @@ HOW = {
     "arctic-code-vault-contributor": "Code in the Arctic Vault",
 }
 
-# real-world awards (not on GitHub, so kept here)
+# real-world awards (not on GitHub, so kept here; TEKNOFEST lives in CREDENTIALS.LOG)
 AWARDS = [
-    {"name": "TEKNOFEST", "sub": "Top 14 of 4,250 · Smart Tour", "glyph": "trophy", "grad": ("#F59E0B", "#EF4444")},
     {"name": "ANTSPARK", "sub": "3rd place · Robotoy", "glyph": "medal", "grad": ("#A78BFA", "#EC4899")},
     {"name": "TÜBİTAK", "sub": "Backed project · Robotoy", "glyph": "shield", "grad": ("#22D3EE", "#2563EB")},
 ]

@@ -6,3 +6,8 @@ _harness.html
 _readme-preview.html
 __pycache__/
 _proj.html
+_cred.html
+# certificate scans stay local; rebuild with scripts/credentials/prepare_assets.py
+scripts/credentials/assets/
+_perf.html
+_before.svg
