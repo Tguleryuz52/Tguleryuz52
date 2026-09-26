@@ -28,7 +28,12 @@ HOW = {
     "galaxy-brain": "Accepted answers",
     "public-sponsor": "Sponsors open source",
     "arctic-code-vault-contributor": "Code in the Arctic Vault",
+    "heart-on-your-sleeve": "Reacted with a heart",
+    "open-sourcerer": "PRs merged across repos",
 }
+
+# tier thresholds (earned count -> next tier), shown as a progress bar
+TIERS = {"pull-shark": ("merged PRs", "merged_prs", [2, 16, 128, 1024])}
 
 # real-world awards (not on GitHub, so kept here; TEKNOFEST lives in CREDENTIALS.LOG)
 AWARDS = [
@@ -92,8 +97,15 @@ def card(item, x, y, w, i, c):
                  f'<g>{bob}<g transform="translate({cx - 36:.1f},18)"><circle cx="36" cy="36" r="34" fill="url(#aw_{c["_t"]}_{i})"/>'
                  f'<circle cx="36" cy="36" r="33" fill="none" stroke="#fff" stroke-opacity=".25"/>'
                  f'{GLYPHS.get(item.get("glyph"), "")}</g></g>')
-    o.append(f'<text x="{cx:.1f}" y="114" text-anchor="middle" font-size="14" font-weight="700" fill="{c["TEXT"]}">{esc(item["name"])}</text>'
-             f'<text x="{cx:.1f}" y="132" text-anchor="middle" font-size="10" fill="{c["MUTED"]}">{esc(item["sub"])}</text></g>')
+    o.append(f'<text x="{cx:.1f}" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="{c["TEXT"]}">{esc(item["name"])}</text>'
+             f'<text x="{cx:.1f}" y="128" text-anchor="middle" font-size="10" fill="{c["MUTED"]}">{esc(item["sub"])}</text>')
+    if item.get("progress") is not None:   # next-tier bar, fills in on load
+        bw = w - 48
+        o.append(f'<rect x="24" y="136" width="{bw:.1f}" height="4" rx="2" fill="{c["RING_BG"]}"/>'
+                 f'<rect x="24" y="136" width="0" height="4" rx="2" fill="{c["CYAN"]}">'
+                 f'<animate attributeName="width" from="0" to="{bw * item["progress"]:.1f}" dur="1.2s" begin="{b + .4:.2f}s" '
+                 f'fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".3 0 .2 1"/></rect>')
+    o.append("</g>")
     return "".join(o)
 
 
@@ -126,9 +138,22 @@ def build(items, theme):
 
 def main():
     out = sys.argv[1] if len(sys.argv) > 1 else "dist"
-    earned = load_data().get("achievements") or []
-    items = [{"kind": "GITHUB", "name": a["name"], "sub": HOW.get(a["slug"], "GitHub achievement"),
-              "tier": a.get("tier"), "uri": badge_uri(a["img"])} for a in earned]
+    data = load_data()
+    earned = data.get("achievements") or []
+    items = []
+    for a in earned:
+        it = {"kind": "GITHUB", "name": a["name"], "sub": HOW.get(a["slug"], "GitHub achievement"),
+              "tier": a.get("tier"), "uri": badge_uri(a["img"])}
+        if a["slug"] in TIERS:
+            noun, key, steps = TIERS[a["slug"]]
+            n = data["stats"].get(key) or 0
+            nxt = next((t for t in steps if t > n), None)
+            if nxt:
+                lvl = steps.index(nxt) + 1
+                prev = steps[lvl - 2] if lvl > 1 else 0
+                it["sub"] = f"{n} {noun} · x{lvl} at {nxt}"
+                it["progress"] = max(0.04, (n - prev) / (nxt - prev))
+        items.append(it)
     items += [dict(a, kind="AWARD") for a in AWARDS]
     for theme in ("dark", "light"):
         write(out, f"achievements-{theme}.svg", build(items, theme))
