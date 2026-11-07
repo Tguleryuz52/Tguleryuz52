@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="195" viewBox="0 0 500 195" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Sans-Serif" role="img" aria-label="Most used languages">
+<style>@keyframes fadein{from{opacity:0}to{opacity:1}}@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@keyframes pop{0%{font-size:3px;opacity:.2}80%{font-size:34px;opacity:1}100%{font-size:28px;opacity:1}}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes ring{from{stroke-dashoffset:252}to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important}}</style>
+<defs><clipPath id="bar"><rect x="25" y="55" width="450" height="8" rx="5"/></clipPath></defs>
+<rect x=".5" y=".5" width="499" height="194" rx="4.5" fill="#0A101F"/>
+<text x="25" y="35" font-size="18" font-weight="600" fill="#22D3EE" style="opacity:0;animation:fadein 0.8s cubic-bezier(.2,.7,.3,1) forwards 0.00s">Most Used Languages</text>
+<g clip-path="url(#bar)"><g style="transform-origin:25px 0;animation:grow 1s cubic-bezier(.4,0,.2,1) both .3s">
+<rect x="25.00" y="55" width="306.36" height="8" fill="#3178c6"/>
+<rect x="330.86" y="55" width="107.65" height="8" fill="#f34b7d"/>
+<rect x="438.01" y="55" width="16.66" height="8" fill="#fcb32c"/>
+<rect x="454.17" y="55" width="9.22" height="8" fill="#f1e05a"/>
+<rect x="462.89" y="55" width="6.32" height="8" fill="#3572A5"/>
+<rect x="468.70" y="55" width="3.41" height="8" fill="#663399"/>
+<rect x="471.61" y="55" width="2.51" height="8" fill="#178600"/>
+<rect x="473.62" y="55" width="1.88" height="8" fill="#e34c26"/>
+</g></g>
+<g transform="translate(25,80)"><g style="opacity:0;animation:rise 0.4s cubic-bezier(.2,.7,.3,1) forwards 0.45s"><circle cx="5" cy="6" r="5" fill="#3178c6"/><text x="15" y="10" font-size="11" fill="#94A3B8">TypeScript 67.97%</text></g></g>
+<g transform="translate(255,80)"><g style="opacity:0;animation:rise 0.4s cubic-bezier(.2,.7,.3,1) forwards 0.55s"><circle cx="5" cy="6" r="5" fill="#f34b7d"/><text x="15" y="10" font-size="11" fill="#94A3B8">C++ 23.81%</text></g></g>
+<g transform="translate(25,105)"><g style="opacity:0;animation:rise 0.4s cubic-bezier(.2,.7,.3,1) forwards 0.65s"><circle cx="5" cy="6" r="5" fill="#fcb32c"/><text x="15" y="10" font-size="11" fill="#94A3B8">MDX 3.59%</text></g></g>
+<g transform="translate(255,105)"><g style="opacity:0;animation:rise 0.4s cubic-bezier(.2,.7,.3,1) forwards 0.75s"><circle cx="5" cy="6" r="5" fill="#f1e05a"/><text x="15" y="10" font-size="11" fill="#94A3B8">JavaScript 1.94%</text></g></g>
+<g transform="translate(25,130)"><g style="opacity:0;animation:rise 0.4s cubic-bezier(.2,.7,.3,1) forwards 0.85s"><circle cx="5" cy="6" r="5" fill="#3572A5"/><text x="15" y="10" font-size="11" fill="#94A3B8">Python 1.29%</text></g></g>
+<g transform="translate(255,130)"><g style="opacity:0;animation:rise 0.4s cubic-bezier(.2,.7,.3,1) forwards 0.95s"><circle cx="5" cy="6" r="5" fill="#663399"/><text x="15" y="10" font-size="11" fill="#94A3B8">CSS 0.65%</text></g></g>
+<g transform="translate(25,155)"><g style="opacity:0;animation:rise 0.4s cubic-bezier(.2,.7,.3,1) forwards 1.05s"><circle cx="5" cy="6" r="5" fill="#178600"/><text x="15" y="10" font-size="11" fill="#94A3B8">C# 0.45%</text></g></g>
+<g transform="translate(255,155)"><g style="opacity:0;animation:rise 0.4s cubic-bezier(.2,.7,.3,1) forwards 1.15s"><circle cx="5" cy="6" r="5" fill="#e34c26"/><text x="15" y="10" font-size="11" fill="#94A3B8">HTML 0.31%</text></g></g>
+</svg>
